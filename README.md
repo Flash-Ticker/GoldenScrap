@@ -12,29 +12,30 @@
 
 
 **Description**
-Tired of the usual currencies or always having the same thing on the server? 
-The Golden Scrap plugin is the ideal admin tool to distribute scrap to players when something goes missing. It is available on Steam and can be used by any Rust server.
+Are you tired of the usual currencies or always having the same thing on the server? 
+The Golden Scrap plugin is the ideal admin tool for distributing scrap to players when something is lost. It is available on Steam and can be used by any Rust server.
 
-The Golden Scrap works like a skin that can be assigned to the scrap resource. With the SkinID: 3239303050 it is easy to give the scrap a customized look and access my Steam upload.
+Golden Scrap works like a skin that can be assigned to the scrap resource. With the SkinID: 3239303050, it's easy to give the scrap a custom look and access my Steam upload.
 
-Integration: simply add the Golden Scrap plugin to your events or edit your loottable to best integrate the plugin into your server flow.
-
-Required authorization: To access this tool, you need the authorization goldenscrap.admin.
-
-
-Translated with DeepL.com (free version)
+Integration: Simply add Golden Scrap to your events or edit your loot table to integrate the plugin seamlessly into your server workflow.
 
 **Permission**
-```foodspoil.active```
+```goldenscrap.admin```
 
 **ChatCommand**
- ```inventory.give.goldenscrap “PlayerName/SteamID” GoldenScrap “Quantity”```
+ ```/goldenscrap <player/steamid> <amount>```
 
 **ConsoleCommand**
- ```inventory.give.goldenscrap “PlayerName/SteamID” “Quantity”```
+ ```inventory.give.goldenscrap "<player name/steamid>" <amount>```
 
 
-**This plugin works with **
+**Notes**
+- Works with online and sleeping players.
+- If the target inventory is full, items may drop to the ground.
+- Make sure to grant the permission to your admin group:
+
+
+**This plugin works with**
 MyBank
 BlackMarket
 WelcomeScrap
