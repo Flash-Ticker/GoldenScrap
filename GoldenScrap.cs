@@ -3,7 +3,7 @@ using System;
 
 namespace Oxide.Plugins
 {
-    [Info("GoldenScrap", "RustFlash", "1.2.0")]
+    [Info("GoldenScrap", "RustFlash", "1.4.0")]
     [Description("Allows admins to give players Golden Scrap via the console or RCON")]
     class GoldenScrap : RustPlugin
     {
