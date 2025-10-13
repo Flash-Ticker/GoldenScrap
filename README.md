@@ -22,11 +22,17 @@ Integration: Simply add Golden Scrap to your events or edit your loot table to i
 **Permission**
 ```goldenscrap.admin```
 
-**ChatCommand**
- ```/goldenscrap <player/steamid> <amount>```
+**Console-command (F1 Konsole):**
 
-**ConsoleCommand**
- ```inventory.give.goldenscrap "<player name/steamid>" <amount>```
+```inventory.give.goldenscrap [Name/SteamID] GoldenScrap 100```
+
+**Chat-Command:**
+
+```/goldenscrap [Name/SteamID] 100```
+
+**RCON-Command:**
+
+```inventory.give.goldenscrap [Name/SteamID] 100```
 
 
 **Notes**
