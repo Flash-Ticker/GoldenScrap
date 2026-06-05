@@ -3,7 +3,7 @@ using System;
 
 namespace Oxide.Plugins
 {
-    [Info("GoldenScrap", "RustFlash", "1.4.2")]
+    [Info("GoldenScrap", "RustFlash", "1.6.0")]
     [Description("Allows admins to give players Golden Scrap via console or RCON")]
     class GoldenScrap : RustPlugin
     {
@@ -13,7 +13,6 @@ namespace Oxide.Plugins
         void Init()
         {
             permission.RegisterPermission(PermissionAdmin, this);
-            cmd.AddConsoleCommand("inventory.give.goldenscrap", this, "GiveGoldenScrapCommand");
             cmd.AddChatCommand("goldenscrap", this, "GoldenScrapChatCommand"); 
         }
 
@@ -45,9 +44,9 @@ namespace Oxide.Plugins
                     return;
                 }
                 
-                targetIdentifier = arg.Args[0];
+                targetIdentifier = arg.Args[0].ToString();
                 
-                if (!int.TryParse(arg.Args[1], out amount) || amount <= 0)
+                if (!int.TryParse(arg.Args[1].ToString(), out amount) || amount <= 0)
                 {
                     Puts("Invalid amount. Must be a positive number.");
                     return;
@@ -61,15 +60,15 @@ namespace Oxide.Plugins
                     return;
                 }
                 
-                targetIdentifier = arg.Args[0];
+                targetIdentifier = arg.Args[0].ToString();
                 
-                if (!arg.Args[1].Equals("GoldenScrap", StringComparison.OrdinalIgnoreCase))
+                if (!arg.Args[1].ToString().Equals("GoldenScrap", StringComparison.OrdinalIgnoreCase))
                 {
                     SendReply(arg, "<color=#FFD700>[GoldenScrap]</color> <color=red>Second argument must be 'GoldenScrap'.</color>");
                     return;
                 }
                 
-                if (!int.TryParse(arg.Args[2], out amount) || amount <= 0)
+                if (!int.TryParse(arg.Args[2].ToString(), out amount) || amount <= 0)
                 {
                     SendReply(arg, "<color=#FFD700>[GoldenScrap]</color> <color=red>Invalid amount. Must be a positive number.</color>");
                     return;
